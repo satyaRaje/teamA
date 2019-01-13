@@ -254,6 +254,10 @@ table.dataTable thead .sorting:after {
 .panel-red {
   border-color: #d9534f;
 }
+.panel-pink
+{
+  color: #ff6699;
+}
 .panel-red > .panel-heading {
   border-color: #d9534f;
   color: white;
