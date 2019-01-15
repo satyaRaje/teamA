@@ -28,9 +28,9 @@ class ci_upload_product extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('TeamA/dashboard/header');
+        $this->load->view('TeamA/dashboard/admin/header');
         $this->load->view('TeamA/product/upload_product');
-        $this->load->view('TeamA/dashboard/footer');
+        $this->load->view('TeamA/dashboard/admin/footer');
     }
 
 

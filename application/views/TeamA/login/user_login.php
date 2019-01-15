@@ -111,7 +111,7 @@
                     var a=  data;
                     var jsonData = JSON.parse(data);
                     if(jsonData['status']==true){
-                        window.location.replace('<?php echo base_url()."index.php/teama/login/login/dashboard";?>');
+                        window.location.replace('<?php echo base_url()."index.php/teama/login/login/dashboard/admin";?>');
                     }else{
 
                         $("#success_message").show();

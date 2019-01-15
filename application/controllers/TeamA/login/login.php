@@ -28,11 +28,11 @@ class Login extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('TeamA/dashboard/panel');
+        $this->load->view('TeamA/dashboard/admin/panel');
     }
 
     public function dashboard(){
-        $this->load->view('TeamA/dashboard/panel');
+        $this->load->view('TeamA/dashboard/admin/panel');
     }
 
     public function user_login_page(){
