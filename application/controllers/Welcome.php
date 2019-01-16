@@ -22,7 +22,7 @@ class Welcome extends CI_Controller {
 	{
 
 	    //print_r($_SESSION);
-		$this->load->view('TeamA/login/login/user_login');
+		$this->load->view('TeamA/dashboard/customer/customer_panel');
 	}
 	/*niki's function call*/
 	public function upload_product_fun()
