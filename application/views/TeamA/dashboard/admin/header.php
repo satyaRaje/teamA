@@ -286,7 +286,7 @@
                             <a href="#"><i class="fa fa-product-hunt fa-fw"></i> Product<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="<?php echo base_url(); ?>index.php/Welcome/upload_product_fun">Upload Product</a>
+                                    <a href="<?php echo base_url(); ?>index.php/teama/product/ci_upload_product">Upload Product</a>
                                 </li>
                                 <li>
                                     <a href="morris.html">View Product</a>
@@ -301,10 +301,10 @@
                             <a href="tables.html"><i class="fa fa-table fa-fw"></i> Quotation</a>
                               <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="<?php echo base_url(); ?>index.php/Welcome/generate_quotation_fun">Generate Quotation</a>
+                                    <a href="<?php echo base_url();?>index.php/teama/product/ci_sidelinks/generatequotation_fun">Generate Quotation</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>index.php/Welcome/view_quotation_fun">View all Quotation</a>
+                                    <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/viewquotation_fun">View all Quotation</a>
                                 </li>
                             </ul>
                         </li>
@@ -312,10 +312,10 @@
                             <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Customer Review</a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">View Enquiry</a>
+                                    <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/viewenquiry_fun">View Enquiry</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">View Bills</a>
+                                    <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/viewbills_fun">View Bills</a>
                                 </li>
                             </ul>
                         </li>
@@ -323,10 +323,10 @@
                             <a href="#"><i class="fa fa-plus fa-fw"></i>  Add<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="<?php echo base_url(); ?>index.php/Welcome/add_blog_fun">Add Blog</a>
+                                    <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/addblog_fun">Add Blog</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>index.php/Welcome/newsletter_fun">Add Newsletter</a>
+                                    <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/addnews_fun">Add Newsletter</a>
                                 </li>
                              </ul>
                             <!-- /.nav-second-level -->
@@ -335,23 +335,23 @@
                             <a href="#"><i class="fa fa-history fa-fw"></i>History<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="<?php echo base_url(); ?>index.php/Welcome/sale_history_fun">Sale History</a>
+                                    <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/salehistory_fun">Sale History</a>
                                 </li>
                                 <li>
-                                    <a href="#">Payment History</a>
+                                    <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/paymenthistory_fun">Payment History</a>
                                 </li>
                                 <li>
-                                    <a href="#">Product History</a>
+                                    <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/producthistory_fun">Product History</a>
                                     <!-- /.nav-third-level -->
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-tag fa-fw"></i>  Generate Coupon</a>
+                            <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/generatecoupon_fun"><i class="fa fa-tag fa-fw"></i>  Generate Coupon</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-users fa-fw"></i> Customer Contact</a>
+                            <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/customercontact_fun"><i class="fa fa-users fa-fw"></i> Customer Contact</a>
                         </li>
                     </ul>
                 </div>
