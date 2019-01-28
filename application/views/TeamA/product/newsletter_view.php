@@ -1,9 +1,9 @@
+<html>
 <?php
 //session_start();
     ?>
 
 <head>
-
     <title>News Letter</title>
    
     <style>
@@ -129,58 +129,48 @@
             padding: 50px;
             display: none;
         }
-		
-
-
-
     </style>
-
-	
-	
-	</head>
+</head>
 <body>
-    <div class="col-sm-8 text-left">
-    <form method="post" action="">
-    <section id="contact" class="content-section ">
-        <div class="contact-section">
-            <div class="container-fluid " style="padding-left: 20%;">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-1">
-                    <br><br><br>
-                            <div class="form-group">
-                                <label style="font-size: 20px;text-align: center;font-weight: bold;margin-left: 30%;">News Letter</b></label>
-                            </div><br>					       
-						    <div class="form-group">
-                                <label for="exampleInputEmail2">News Title : </label>
-                                <input type="text" class="form-control" name="ntitle" placeholder="">
-                            </div>
+      <script src="<?php echo base_url();?>style/formwizard/js/jquery.min.js"></script>
+      <script src="<?php echo base_url();?>style/formwizard/js/popper.min.js"></script>
+      <script src="<?php echo base_url();?>style/formwizard/js/bootstrap.min.js"></script>
+      <script src="<?php echo base_url();?>style/formwizard/script.js"></script>  
+      <div class="page-wrapper">
+        <div id="page-wrapper"><br>
+          <h1 align="center">News Letter</h1> 
+           <form method="post" action="">
+            <section id="contact" class="content-section ">
+                <div class="contact-section">
+                    <div class="container-fluid " style="padding-left: 20%;">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-1">
+                            	    <div class="form-group">
+                                        <label for="exampleInputEmail2">News Title : </label>
+                                        <input type="text" class="form-control" name="ntitle" placeholder="">
+                                    </div>
 
-                            <div class="form-group">
-                                <label for="exampleInputEmail2">News Description : </label>                            
-                            </div>
-                            <div class="form-group">
-                                 <textarea rows="4" cols="50"></textarea>
-                            </div>
-                            <div class="form-group">                            
-                                <form action="#" method="POST" enctype="multipart/form-data">
-                                <label  style="font-size: 16px">Upload Image :  </label>              <input type="file" name="image"/ > 
-                                </form><br><br>
-                           </div>
-							<div class="form-group" align="center">
-                                <input type="submit" class="btnRegister" name="b_post" style="width:50%" value="Post"/>
-                            </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    </form>
-</div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail2">News Description : </label>                            
+                                    </div>
+                                    <div class="form-group">
+                                         <textarea rows="4" cols="50"></textarea>
+                                    </div>
+                                    <div class="form-group">                            
+                                        <form action="#" method="POST" enctype="multipart/form-data">
+                                        <label  style="font-size: 16px">Upload Image :  </label>              <input type="file" name="image"/ > 
+                                        </form><br><br>
+                                   </div>
+        							<div class="form-group" align="center">
+                                        <input type="submit" class="btnRegister" name="b_post" style="width:50%" value="Post"/>
+                                    </div>
+                             </div>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+          </form>
+       </div>
+   </div>
 </body>
-<div>
-<footer class="container-fluid text-center">
-        <!--?php include 'footer.php';?-->
-    </footer>
-</div>    
 </html>
