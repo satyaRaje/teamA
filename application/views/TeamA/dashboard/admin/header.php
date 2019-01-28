@@ -289,27 +289,27 @@
                                     <a href="<?php echo base_url(); ?>index.php/teama/product/ci_upload_product">Upload Product</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">View Product</a>
+                                    <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/viewproduct_fun">View Product</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>index.php/Welcome/view_stlfile_fun">View STL File</a>
+                                    <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/viewstlfile_fun">View STL File</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Quotation</a>
+                            <a href="#"><i class="fa fa-table fa-fw"></i>Quotation<span class="fa arrow"></span></a>
                               <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="<?php echo base_url();?>index.php/teama/product/ci_sidelinks/generatequotation_fun">Generate Quotation</a>
+                                    <a href="<?php echo base_url();?>index.php/teama/product/ci_sidelinks/generatequotations_fun">Generate Quotation</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/viewquotation_fun">View all Quotation</a>
+                                    <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/viewquotations_fun">View all Quotation</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Customer Review</a>
+                            <a href="#"><i class="fa fa-edit fa-fw"></i>Customer Review<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/viewenquiry_fun">View Enquiry</a>
@@ -320,7 +320,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-plus fa-fw"></i>  Add<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-plus fa-fw"></i>Add<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="<?php echo base_url(); ?>index.php/teama/product/ci_sidelinks/addblog_fun">Add Blog</a>

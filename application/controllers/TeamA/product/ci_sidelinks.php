@@ -29,43 +29,43 @@ class ci_sidelinks extends CI_Controller {
     public function index()
     {
         $this->load->view('teamA/dashboard/admin/header');
-        $this->load->view('teamA/product/generate_quotations');
+        $this->load->view('teamA/dashboard/admin/panel');
         $this->load->view('teamA/dashboard/admin/footer');
     }
     public function viewproduct_fun()
     {
         $this->load->view('teamA/dashboard/admin/header');
-        $this->load->view('teamA/product/generate_quotations');
+        $this->load->view('teamA/product/viewproduct_view');
         $this->load->view('teamA/dashboard/admin/footer');
     }
-    public function viewstl_fun()
+    public function viewstlfile_fun()
     {
         $this->load->view('teamA/dashboard/admin/header');
-        $this->load->view('teamA/product/generate_quotations');
+        $this->load->view('teamA/product/viewstlfile_view');
         $this->load->view('teamA/dashboard/admin/footer');
     }
-    public function generatequotation_fun()
+    public function generatequotations_fun()
     {
         $this->load->view('teamA/dashboard/admin/header');
-        $this->load->view('teamA/product/generate_quotations');
+        $this->load->view('teamA/product/generatequotations_view');
         $this->load->view('teamA/dashboard/admin/footer');
     }
-    public function viewquo_fun()
+    public function viewquotations_fun()
     {
         $this->load->view('teamA/dashboard/admin/header');
-        $this->load->view('teamA/product/generate_quotations');
+        $this->load->view('teamA/product/viewquotations_view');
         $this->load->view('teamA/dashboard/admin/footer');
     }
     public function viewenquiry_fun()
     {
         $this->load->view('teamA/dashboard/admin/header');
-        $this->load->view('teamA/product/generate_quotations');
+        $this->load->view('teamA/product/viewenquiry_view');
         $this->load->view('teamA/dashboard/admin/footer');
     }
     public function viewbills_fun()
     {
         $this->load->view('teamA/dashboard/admin/header');
-        $this->load->view('teamA/product/generate_quotations');
+        $this->load->view('teamA/product/viewbills_view');
         $this->load->view('teamA/dashboard/admin/footer');
     }
     public function addblog_fun()
@@ -83,7 +83,7 @@ class ci_sidelinks extends CI_Controller {
     public function salehistory_fun()
     {
         $this->load->view('teamA/dashboard/admin/header');
-        $this->load->view('teamA/product/generate_quotations');
+        $this->load->view('teamA/product/salehistory_view');
         $this->load->view('teamA/dashboard/admin/footer');
     }
     public function paymenthistory_fun()
@@ -95,19 +95,19 @@ class ci_sidelinks extends CI_Controller {
     public function producthistory_fun()
     {
         $this->load->view('teamA/dashboard/admin/header');
-        $this->load->view('teamA/product/generate_quotations');
+        $this->load->view('teamA/product/producthistory_view');
         $this->load->view('teamA/dashboard/admin/footer');
     }
     public function generatecoupon_fun()
     {
         $this->load->view('teamA/dashboard/admin/header');
-        $this->load->view('teamA/product/generate_quotations');
+        $this->load->view('teamA/product/generatecoupon_view');
         $this->load->view('teamA/dashboard/admin/footer');
     }
     public function customercontact_fun()
     {
         $this->load->view('teamA/dashboard/admin/header');
-        $this->load->view('teamA/product/generate_quotations');
+        $this->load->view('teamA/product/customercontact_view');
         $this->load->view('teamA/dashboard/admin/footer');
     }
 }
