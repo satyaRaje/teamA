@@ -1,4 +1,4 @@
-<?php include 'customer_header.php'; ?>
+<?php include 'Customer_header.php'; ?>
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
@@ -7,7 +7,7 @@
             <!-- /.col-lg-12 -->
         </div>
         <!-- /.row -->
-        <div class="row">
+        <!--div class="row">
             <div class="col-lg-3 col-md-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
@@ -102,8 +102,8 @@
             <div class="panel-heading">
                 <i class="fa fa-bell fa-fw"></i> Notifications Panel
             </div>
-            <!-- /.panel-heading -->
-            <div class="panel-body">
+            <--panel-heading -->
+            <!--div class="panel-body">
                 <div class="list-group">
                     <a href="#" class="list-group-item">
                         <i class="fa fa-comment fa-fw"></i> New Comment
@@ -152,13 +152,12 @@
                     </a>
                 </div>
                 <!-- /.list-group -->
-                <a href="#" class="btn btn-default btn-block">View All Alerts</a>
+                <!--a href="#" class="btn btn-default btn-block">View All Alerts</a>
             </div>
             <!-- /.panel-body -->
-        </div>
+        <!--/div>
 
-    </div>
+    </div--> <?php print_r($this->session->userdata());?>
+      <?php //print_r($_SESSION['__ci_last_regenerate']); ?>
 
-
-
-<?php include 'footer.php'; ?>
+<?php include 'Customer_footer.php'; ?>

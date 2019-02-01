@@ -21,7 +21,7 @@
                                 <div class="form-wizard active">
                                     <div class="wizard-icon"><i class="fa fa-file-text-o"></i></div>
                                     <p>Billing to</p>
-                                </div>
+                                 </div>
                                 <div class="form-wizard">
                                     <div class="wizard-icon"><i class="fa fa-user"></i></div>
                                     <p>Shipping to</p>

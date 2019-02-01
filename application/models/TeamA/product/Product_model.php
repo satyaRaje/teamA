@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Mod_Login extends CI_Model {
+class product_model extends CI_Model {
 
     /**
      * Index Page for this controller.
@@ -28,28 +28,12 @@ class Mod_Login extends CI_Model {
     {
         $this->load->view('login');
     }
-    public function upload_product($data){
-       $this->db->insert('tblproduct',$data);
-        if($this->db->affected_rows() > 0)
-        {
-            // Code here after successful insert
-            echo "test pass"; // to the controller
-        }else{
-            echo "test fail"; // to the controller
-        }
-    }
+
+    public function select_uploaded_product(){
 
 
-    public function register_success($data){
-        $this->db->insert('tbllogin',$data);
-        if($this->db->affected_rows() > 0)
-        {
-            // Code here after successful insert
-            return true; // to the controller
-        }else{
-            return false;    // to the controller
-        }
     }
+
 
 }
 

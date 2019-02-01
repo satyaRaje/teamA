@@ -20,26 +20,40 @@ class Login extends CI_Controller {
      */
     public function __construct()
     {
+        
         parent::__construct();
+       // parent::Controller();
         $this->load->database();
-        //$this->load->library('session');
+        $this->load->library('session');
+        $this->load->library('email');
         //$this->ci =& get_instance();
     }
 
     public function index()
     {
+        $this->load->view('TeamA/login/header_view1');
+        $this->load->view('TeamA/login/user_login');
+        $this->load->view('TeamA/login/footer_view1');
+    }
+
+    public function admin_dashboard(){
         $this->load->view('TeamA/dashboard/admin/panel');
     }
 
-    public function dashboard(){
-        $this->load->view('TeamA/dashboard/admin/panel');
+
+    public function customer_dashboard(){
+        
+        $this->load->view('TeamA/dashboard/customer/Customer_panel');
+        
     }
 
     public function user_login_page(){
         $this->load->view('TeamA/login/user_login');
+        $this->load->view('TeamA/login/footer_view1');
     }
     public function login_page(){
         $this->load->view('TeamA/login/login');
+        $this->load->view('TeamA/login/footer_view1');
     }
     public function send_email_otp(){
         header('Access-Control-Allow-Origin: *');
@@ -57,9 +71,22 @@ class Login extends CI_Controller {
                  $result['otp_message']="Email Address Already Exist.";
 
              }else{
+                 $this->email->from('hello@ipro3d.io', 'Mr. Yogesh Pawar');
+                 $this->email->to($_POST['name']);
+                $this->email->subject('OTP IPRO3d 3d Printing');
+                $this->email->message('Thank for initiating registration process. Please do not share your OTP with anyone. Your OTP for registration is '.$rand);
+                if($this->email->send())
+                {
                  $result['email_otp']=$rand;
+                 
                  $result['status']=true;
                  $result['otp_message']="OTP Successfully Send...";
+                }else{
+                    $result['email_otp']=0;
+                 $result['status']=false;
+                 $result['otp_message']="SERVER ERROR.";
+                    
+                }
               }
         echo json_encode($result);
     }
@@ -78,7 +105,7 @@ class Login extends CI_Controller {
          );
         $this->load->model('TeamA/login/mod_login','mod');
         $result=array();
-        if($this->mod->register_success($data)===true){
+        if($this->mod->register_success($data)==true){
 
             $result['status']=true;
             mkdir( getcwd().'/uploads/user/'.$rand, 0777, true);
@@ -99,7 +126,7 @@ class Login extends CI_Controller {
         $result = array();
         include 'sendotp/test.php';
             $result['mobile_otp']=$rand;
-        //    $a= send_message($_POST['name'],$rand);
+            $a= send_message($_POST['name'],$rand);
             $result['otp_message']="OTP Send Successfully...";
         echo json_encode($result);
         //}else{
@@ -110,10 +137,11 @@ class Login extends CI_Controller {
 
     public function email_exist_check(){
         header('Access-Control-Allow-Origin: *');
-        $query=$this->db->query("select id,password as email,mobile,dir_url from tbllogin where email='".$_POST['name']."' limit 1");
+        $query=$this->db->query("select id,password as email,mobile,dir_url,flag from tbllogin where email='".$_POST['name']."' limit 1");
         $result = array();
         $result['password']=null;
-
+      //  session_start();
+          $this->load->library('session');
         foreach ($query->result() as $row)
         {
             $result['password']=$row->email;
@@ -121,6 +149,7 @@ class Login extends CI_Controller {
             $result['mobile']=$row->mobile;
             $result['user_id']=$row->id;
             $result['dir_url']=$row->dir_url;
+            $result['flag']=$row->flag;
         }
         if($result['password']!=null){
 
@@ -129,11 +158,14 @@ class Login extends CI_Controller {
                 'email'=>$result['email'],
                 'mobile'=>$result['mobile'],
                 'user_id'=>$result['user_id'],
-                'dir_url'=>$result['dir_url']
+                'dir_url'=>$result['dir_url'],
+                'flag'=>$result['flag']
+
             );
-            $this->session->unset_userdata($result);
+        //    $this->session->unset_userdata($result);
            // $this->session->set_userdata('name','gaurav');
-            $this->session->set_userdata($s);
+             //session_regenerate_id();
+            $this->session->set_userdata($result);
 
         }else{
             $result['status']=false;
@@ -152,7 +184,48 @@ class Login extends CI_Controller {
         $result=array();
         $result['enc']=md5($_POST['name']);
         $result['status']=true;
+        //$this->load->library('session');
+        
+        //$this->session->set_userdata($s);
         echo json_encode($result);
+     }
+     
+     public function login_success(){
+         $p=md5($_POST['password']);
+        $query=$this->db->query("select id,password as pwd,mobile,dir_url,flag from tbllogin where email='".$_POST['email']."' && password='".$p."'");
+        $result = array();
+        $result['password']=null;
+      //  session_start();
+          $this->load->library('session');
+        foreach ($query->result() as $row)
+        {
+            $result['password']=$row->pwd;
+            $result['email']=$_POST['email'];
+            $result['mobile']=$row->mobile;
+            $result['user_id']=$row->id;
+            $result['dir_url']=$row->dir_url;
+            $result['flag']=$row->flag;
+        }
+        
+        //
+        //if($result['password']!=null){
+            $this->session->set_userdata($result);
+           // print_r($_SESSION);
+           
+           if($result['flag']=='0'){
+           header("Location: ".base_url()."index.php/TeamA/login/login/customer_dashboard");
+           }else if($result['flag']=='1'){
+               header("Location: ".base_url()."index.php/TeamA/login/login/admin_dashboard");
+           }else{
+            echo "Wrong Password";
+           }
+            //echo "<script>location.href = ".base_url().'index.php/TeamA/login/login/customer_dashboard'.";</script>";
+            
+        //}else{
+            
+        //}
+        
+     
      }
 
 }

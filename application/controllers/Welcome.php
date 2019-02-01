@@ -22,50 +22,7 @@ class Welcome extends CI_Controller {
 	{
 
 	    //print_r($_SESSION);
-		$this->load->view('TeamA/dashboard/customer/customer_panel');
+        $this->load->view('TeamA/login/user_login');
+        $this->load->view('TeamA/login/footer_view1');
 	}
-	/*niki's function call*/
-	public function upload_product_fun()
-	{
-		$this->load->view('TeamA/product/upload_product');
-	}
-	public function view_stlfile_fun()
-	{
-		$this->load->view('TeamA/product/view_stlfile_view');
-	}
-	public function generate_quotation_fun()
-	{
-		$this->load->view('TeamA/product/generate_quotation_view1');
-	}
-	public function view_quotation_fun()
-	{
-		$this->load->view('TeamA/product/view_quotations_view');
-	}
-	
-	public function add_blog_fun()
-	{
-		$this->load->view('TeamA/product/addblog_view');
-	}
-	public function newsletter_fun()
-	{
-		$this->load->view('TeamA/product/newsletter_view');
-	}
-/*	public function add_blog_fun()
-	{
-		$this->load->view('TeamA/product/addblog_view');
-	}
-	public function add_blog_fun()
-	{
-		$this->load->view('TeamA/product/addblog_view');
-	}
-	public function add_blog_fun()
-	{
-		$this->load->view('TeamA/product/addblog_view');
-	}*/
-
-
-
-
-	
-
 }

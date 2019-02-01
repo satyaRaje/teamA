@@ -86,10 +86,7 @@
             display: none;
 			
         }
-		
-
-
-
+        
         #std_panel, #std_flip {
             padding: 5px;
             text-align: center;
@@ -101,10 +98,6 @@
             padding: 50px;
             display: none;
         }
-
-
-
-
         #myac_panel, #myac_flip {
             padding: 5px;
             text-align: center;

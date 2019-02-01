@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Mod_Login extends CI_Model {
+class Enquiry extends CI_Controller {
 
     /**
      * Index Page for this controller.
@@ -22,35 +22,23 @@ class Mod_Login extends CI_Model {
     {
         parent::__construct();
         $this->load->database();
+        //$this->load->library('session');
+        //$this->ci =& get_instance();
     }
 
     public function index()
     {
-        $this->load->view('login');
-    }
-    public function upload_product($data){
-       $this->db->insert('tblproduct',$data);
-        if($this->db->affected_rows() > 0)
-        {
-            // Code here after successful insert
-            echo "test pass"; // to the controller
-        }else{
-            echo "test fail"; // to the controller
-        }
+       // $this->load_panel_data();
     }
 
-
-    public function register_success($data){
-        $this->db->insert('tbllogin',$data);
-        if($this->db->affected_rows() > 0)
-        {
-            // Code here after successful insert
-            return true; // to the controller
-        }else{
-            return false;    // to the controller
-        }
-    }
-
+     public function select_enquiry(){
+        $user=$this->session->userdata('user');
+        $query = $this->db->get_where('tblenquiry', array('status'=>'0'));
+        $data['data'] = $query->result();
+        $this->load->view('TeamA/dashboard/admin/header');
+        $this->load->view('TeamA/enquiry/enquiry',$data);
+        $this->load->view('TeamA/dashboard/admin/footer'); 
+     }    
 }
 
 ?>

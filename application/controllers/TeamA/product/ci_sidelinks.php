@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class ci_sidelinks extends CI_Controller {
 
     /**
@@ -25,7 +24,6 @@ class ci_sidelinks extends CI_Controller {
         //$this->load->library('session');
         //$this->ci =& get_instance();
     }
-
     public function index()
     {
         $this->load->view('teamA/dashboard/admin/header');

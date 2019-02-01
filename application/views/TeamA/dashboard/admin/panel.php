@@ -1,4 +1,5 @@
-<div id="page-wrapper">
+<?php include 'header.php'; ?>
+    <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Dashboard</h1>
@@ -339,5 +340,9 @@
             </div>
             <!-- /.panel-body -->
         </div>
-
+            <?php print_r($_SESSION['__ci_last_regenerate']); ?>
     </div>
+
+
+
+<?php include 'footer.php'; ?>
